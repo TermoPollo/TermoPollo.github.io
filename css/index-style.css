@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css?family=Lobster:400,500,600,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Grandstander:400,500,600,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,600,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Audiowide:400,500,600,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Acme:400,500,600,700&display=swap');
+
+/* ########################################################################################## */
+/*                                      Presentation                                          */
+/* ########################################################################################## */
+
+.presentation {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  background: rgba(0, 0, 0, 0.5);
+  box-shadow: 0vh 0vw 1.52vh #B8860B;
+  margin: 7.6vh;
+  padding-bottom: 2vh;
+  border-radius: 3vh;
+  transition: box-shadow 1s;
+}
+
+.presentation:hover {
+  box-shadow: 0vh 0vw 2.52vh #FFD700;
+}
+
+.presentation .content{
+  margin-top: 30px;
+  margin-bottom: 3vh;
+  padding: 0vh 2.2vw;
+  border-radius: 1.5vh;
+}
+
+.presentation .content .title {
+  font-family: Acme;
+  color: white;
+  font-size: 7.6vh;
+  margin: 4.56vh 0vw;
+  text-align: center;
+  cursor: default;
+}
+
+.presentation .content .text {
+  width: 25.62vw;
+  color: #FFFAF0;
+  margin: auto;
+  text-align: center;
+  font-family: Grandstander;
+  font-size: 2.43vh;
+  letter-spacing: 0.073vw;
+  word-spacing: 0.073vw;
+  line-height: 3.8vh;
+  cursor: default;
+}
+
+@media screen and (max-width: 1050px) {
+  .presentation .content .text {
+    width: auto;
+  }
+}
+
+@keyframes astrobot {
+  25% {
+    transform: translateY(-3vh);
+  }
+  75% {
+    transform: translateY(1.52vh);
+  }
+  100% {
+    transform: translateY(0vh);
+  }
+}
+
+.presentation .prs-img {
+  margin-top: 4vh;
+  height: 76.1vh;
+  animation: astrobot 10s infinite;
+}
+
+/* ########################################################################################## */
+/*                                   Presentation End                                         */
+/* ########################################################################################## */
+
+.covid-container {
+  position: relative;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  cursor: url('../images/coronavirus.png') 45 45, pointer;
+  background: rgba(0, 0, 0, 0.5);
+  box-shadow: 0vh 0vw 1.52vh #B8860B;
+  margin: 7.6vh;
+  padding: 8vh;
+  border-radius: 3vh;
+}
+
+.covid-container .face {
+  position: relative;
+  height: 300px;
+  width: 300px;
+  border-radius: 50%;
+  background:#ffcd00;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 3vh 0vw;
+}
+
+.covid-container .face::before {
+  content: '';
+  position: absolute;
+  top: 180px;
+  width: 150px;
+  height: 70px;
+  border-radius: 0px 0px 70px 70px;
+  background: #b57700;
+  transition: 0.5s;
+}
+
+.covid-container .face:hover::before {
+  top: 210px;
+  height: 20px;
+  border-radius: 0px 0px 0px 0px;
+  background: #9d0b00;
+}
+
+.covid-container .face:hover {
+  background: linear-gradient(180deg, #f44336, #f44336, #ffcd00);
+}
+
+.covid-container .face .eyes {
+  position: relative;
+  top: -40px;
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.covid-container .face .eyes .eye {
+  position: relative;
+  height: 80px;
+  width: 80px;
+  display: block;
+  margin: 0 15px;
+  background: white;
+  border-radius: 50%;
+}
+
+.covid-container .face .eyes .eye::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 25px;
+  transform: translate(-50%, -50%);
+  width: 40px;
+  height: 40px;
+  background: #333;
+  border-radius: 50%;
+}

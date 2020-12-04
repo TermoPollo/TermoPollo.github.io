@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+    <head>
+        <title>Elathon - Random Generator</title>
+        <link rel="stylesheet" href="../css/random-number-style.css">
+        <link rel="stylesheet" href="../css/nav-footer.css">
+    </head>
+
+    <body>
+        <header>
+            <nav>
+                <div class="logo">
+                    <img src="../images/elathonlogo.png" alt="Elathon Logo">
+                    <h2 class="logo-txt"><strong>ELATHON</strong></h2>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html"><strong>Home</strong></a></li>
+                    <li class="selected-menu"><a href="random-gen.html"><strong>Random Generator</strong></a></li>
+                    <li><a href="#"><strong>Crypted Notepad</strong></a></li>
+                    <li><a href="subjects-notes.html"><strong>Subjects Notes</strong></a></li>
+                </ul>
+                <div class="login-btn"><p class="login-btn-txt"><b>Account</b></p></div>
+                <div class="hamburger">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </div>
+            </nav>
+
+            <script src="index-script.js"></script>
+        </header>
+
+        <main>
+            <div class="page-head">
+                <span>Random Number Generator</span>
+            </div>
+            <div class="main-container">
+                <form class="gen-container">
+                    <div class="range-selection">
+                        <div class="field">
+                            <input type="number" id="min-input" required>
+                            <label for="min-input">Minimum *</label>
+                        </div>
+                        <div class="field">
+                            <input type="number" id="max-input" required>
+                            <label for="max-input">Maximum *</label>
+                        </div>
+                    </div>
+                    <div class="gen-settings-container">
+                        <div class="field">
+                            <input type="number" id="amount-generations-input" value="1" required>
+                            <label for="amount-generations-input">Number of Generations *</label>
+                        </div>
+                        <div class="field">
+                            <input type="number" id="group-input" value="1" required>
+                            <label for="group-input">Number of Groups *</label>
+                        </div>
+                        <div class="dup-field">
+                            <label for="duplicates-check">Duplicates</label>
+                            <input type="checkbox" id="duplicates-check" checked>
+                        </div>
+                    </div>
+                    <div class="generate-btn">
+                        <button type="submit" class="btn">Generate</button>
+                    </div>
+                    <div class="datetime"></div>
+                </form>
+                <div id="num-container">
+                    <div class="group">
+                        <span class="num">Number will be here</span>
+                    </div>
+                </div>
+            </div>
+
+            <script src="../javascript/random-number-script.js"></script>
+        </main>
+
+        <footer>
+            <hr class="foot-line">
+            <div class="foot-contents">
+              <p class="copyright">&copy; 2020 Elathon, All rights reserved.</p>
+            </div>
+          </footer>
+    </body>
+</html>

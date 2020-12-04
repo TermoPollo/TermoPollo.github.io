@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css?family=Lobster:400,500,600,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Grandstander:400,500,600,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,600,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Audiowide:400,500,600,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Acme:400,500,600,700&display=swap');
+
+/* ########################################################################################## */
+/*                                           Nav                                              */
+/* ########################################################################################## */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 2.3vh;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #DCDCDC;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background-color: orange;
+    border-radius: 1.5vh;
+}
+  
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+background-color: #FF8C00;
+}
+
+body {
+    background-image: url("../images/page-bg.jpg");
+    background-attachment: fixed;
+    overflow-x: hidden;
+}
+
+header {
+    position: -webkit-sticky;
+    position: sticky;
+    z-index: 100;
+    top: 1vh;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 12.2vh;
+    background: linear-gradient(to right, #59b300, #008000);
+    border-radius: 4.56vh;
+    margin: 1vh 0.36vw;
+    box-shadow: 0.3vh 0vw 0.76vh Aqua, 0vh 0.22vw 0.76vh Aqua, -0.3vh 0vw 0.76vh Aqua, 0vh -0.22vw 0.76vh Aqua;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 11vh;
+    cursor: pointer;
+}
+  
+.logo .logo-txt {
+    color: white;
+    line-height: 11vh;
+    margin-left: 0.73vw;
+    font-size: 4.9vh;
+    font-family: Audiowide;
+    cursor: pointer;
+    transition: color 1s;
+    transition: font-size none; 
+    
+}
+
+.logo .logo-txt:hover {
+    color: purple;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    width: 45%;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: silver;
+    font-family: Grandstander;
+    font-size: 2.4vh;
+}
+
+.nav-links a:hover {
+    color: white;
+    text-shadow: 0vh 0vw 1vh Cyan;
+}
+
+.selected-menu a {
+    text-decoration: underline;
+    text-underline-position: under;
+    color: white;
+}
+
+.login-btn{
+    border-color: silver;
+    border-radius: 1.5vh;
+    border-width: 0.19vw;
+    border-style: solid;
+    background: darkred;
+    height: 5.3vh;
+    width: auto;
+    padding: 0vh 0.73vw;
+    transition: background 0.3s ease;
+    cursor: pointer;
+}
+  
+.login-btn:hover {
+    background: red;
+}
+  
+.login-btn-txt{
+    margin: 0.5vh 0vw;
+    text-decoration: none;
+    font-family: Audiowide;
+    color: white;
+    font-size: 2.43vh;
+}
+  
+.burger {
+    display: none;
+}
+  
+.burger div{
+    width: 1.83vw;
+    height: 0.76vh;
+    background-color: white;
+    margin: 0.76vh;
+    transition: all 0.3s ease;
+}
+    
+@media screen and (max-width: 1050px) {
+    header {
+        top: 0;
+    }
+
+    nav {
+        border: none;
+        box-shadow: none;
+        margin: 0px;
+        border-radius: 0px;
+    }
+
+    .line {
+        width: 30px;
+        height: 3px;
+        background: white;
+        margin: 5px;
+    }
+
+    .nav-links {
+        position: fixed;
+        right: 0px;
+        height: 95vh;
+        top: 12vh;
+        background: linear-gradient(to right, #59b300, #008000);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        clip-path: circle(70px at 90% -15%);
+        -webkit-clip-path: circle(70px at 90% -15%);
+        transition: all 1s ease-out;
+    }
+
+    .nav-links.open {
+        clip-path: circle(1000px at 90% -10%);
+        -webkit-clip-path: circle(1000px at 90% -10%);
+    }
+}
+
+/* ########################################################################################## */
+/*                                   Footer / Nav End                                         */
+/* ########################################################################################## */
+
+.foot-line {
+    margin: 3vh;
+    height: 0.3vh;
+    color: grey;
+  }
+  
+  .foot-contents {
+    justify-content: space-around;
+    position: flex;
+  }
+  
+  .foot-contents .copyright {
+    margin: 3vh;
+    place-content: left;
+    color: silver;
+    font-family: Roboto;
+    font-size: 2.43vh;
+  }
+
+/* ########################################################################################## */
+/*                                      Footer End                                            */
+/* ########################################################################################## */

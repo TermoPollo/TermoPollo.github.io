@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css?family=Lobster:400,500,600,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Grandstander:400,500,600,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,600,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Audiowide:400,500,600,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Acme:400,500,600,700&display=swap');
+
+/* ########################################################################################## */
+/*                                      English Poetry                                        */
+/* ########################################################################################## */
+
+main {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 7vh;
+}
+
+main > div {
+    margin: 5vh;
+    color: white;
+    font-family: Grandstander;
+}
+
+.title {
+    font-size: 5rem;
+}
+
+.introduction {
+    font-size: 2rem;
+}
+
+.poetry-text {
+    font-size: 1.5rem;
+}

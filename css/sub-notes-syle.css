@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css?family=Lobster:400,500,600,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Grandstander:400,500,600,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,600,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Audiowide:400,500,600,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Acme:400,500,600,700&display=swap');
+
+/* ########################################################################################## */
+/*                                           Subjects                                         */
+/* ########################################################################################## */
+
+.main-container {
+    margin: 7.61vh;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 3vh;
+    box-shadow: 0vh 0vw 1.52vh darkred;
+}
+
+.page-head{
+    font-family: Audiowide;
+    font-size: 7.61vh;
+    font-weight: bold;
+    color: white;
+    cursor: default;
+    padding: 4.56vh;
+}
+
+.sub-container {
+    width: 100%;
+    padding: 2.92vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.subject-wrapper {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    flex-flow: row wrap;
+    align-items: center;
+    background: #228B22;
+    width: 100%;
+    padding: 3vh;
+    margin: 5vh 0vw;
+    border-radius: 1.52vh;
+    height: auto;
+    transition: border-radius 0.3s;
+    overflow: hidden;
+    box-shadow: 0vh 0vw 1vh white;
+}
+
+.subject-wrapper:hover {
+    border-radius: 0vh;
+}
+
+.subject-wrapper > span {
+    transition: 1;
+    opacity: 0;
+}
+
+.subject-wrapper:hover > span {
+    opacity: 1;
+}
+
+.subject-wrapper > span:nth-child(1) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0.76vh;
+    background: linear-gradient(to right, transparent, #ADFF2F);
+    animation: animate1 2s linear infinite;
+}
+
+@keyframes animate1 {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100%);
+    } 
+}
+
+.subject-wrapper > span:nth-child(2) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0.36vw;
+    height: 100%;
+    background: linear-gradient(to bottom, transparent, #ADFF2F);
+    animation: animate2 2s linear infinite;
+    animation-delay: 1s;
+}
+
+@keyframes animate2 {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(100%);
+    } 
+}
+
+.subject-wrapper > span:nth-child(3) {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 0.76vh;
+    background: linear-gradient(to left, transparent, #ADFF2F);
+    animation: animate3 2s linear infinite;
+}
+
+@keyframes animate3 {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    } 
+}
+
+.subject-wrapper > span:nth-child(4) {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0.36vw;
+    height: 100%;
+    background: linear-gradient(to top, transparent, #ADFF2F);
+    animation: animate4 2s linear infinite;
+    animation-delay: 1s;
+}
+
+@keyframes animate4 {
+    0% {
+        transform: translateY(100%);
+    }
+    100% {
+        transform: translateY(-100%);
+    } 
+}
+
+.subject-wrapper .info-container {
+    display: flex;
+}
+
+.subject-wrapper .info-container img {
+    height: 12.17vh;
+    margin-right: 1.46vw;
+}
+
+.subject-wrapper .info-container .text {
+    display: flex;
+    flex-direction: column;
+    flex: flex-start;
+    text-align: left;
+}
+
+.subject-wrapper .info-container .text .subject-title {
+    font-family: Acme;
+    font-size: 3.34vh;
+    margin: 1.52vh 0.36vw;
+    color: white;
+    cursor: default;
+}
+
+.not-available {
+    color: red;
+    font-family: Grandstander;
+    margin-left: 0.76vw;
+    font-size: 2.43vh;
+}
+
+.available {
+    color: purple;
+    font-family: Grandstander;
+    margin-left: 0.76vw;
+    font-size: 2.43vh;
+}
+
+.subject-wrapper .info-container .text .subject-des {
+    font-family: Grandstander;
+    width: 21.96vw;
+    font-size: 2.43vh;
+    color: silver;
+    cursor: default;
+}
+
+.subject-wrapper .subject-btn {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+.subject-wrapper .subject-btn a {
+    padding: 10px 20px;
+    width: auto;
+    height: auto;
+    text-align: center;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 10px;
+    background: #00BFFF;
+    border-color: #1E90FF;
+    font-size: 20px;
+    font-family: Grandstander;
+    color: white;
+    margin: 10px 15px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.subject-wrapper .subject-btn a:hover {
+    transform: scale(1.1, 1.1);
+    box-shadow: 0vh 0vw 1.52vh #000000;
+}
+
+@media screen and (max-width: 1050px) {
+    .subject-wrapper .info-container .text .subject-des {
+        width: 100%;
+    }
+    .subject-wrapper .subject-btn {
+        margin-top: 5vh;
+    }
+}
+
+@media screen and (min-width: 1051px) {
+    .subject-wrapper .subject-btn a {
+        padding: 1.52vh 1.42vw;
+        border-width: 0.3vh;
+        border-radius: 1.52vh;
+        font-size: 3vh;
+        margin: 1.52vh 1.09vw;
+    }
+}
+
+/* ########################################################################################## */
+/*                                   ^  Subject End  ^                                        */
+/* ########################################################################################## */
+
+.foot-line {
+    margin: 3vh;
+    height: 0.3vh;
+    color: grey;
+}
+  
+.foot-contents {
+    justify-content: space-around;
+    position: flex;
+}
+  
+.foot-contents .copyright {
+    margin: 3vh;
+    place-content: left;
+    color: silver;
+    font-family: Roboto;
+    font-size: 2.43vh;
+}
